@@ -1,0 +1,77 @@
+.sub-main-w3 {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.sub-main-w3 form {
+    max-width: 500px;
+    margin: 0 5vw;
+    background: #ffffff;
+    padding: 3.5vw;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.sub-main-w3 label {
+    font-size: 14px;
+    color: #070706;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.sub-main-w3 input[type="submit"] {
+    color: #fff;
+    background: #f36109;
+    border: none;
+    padding: 13px 0;
+    margin-top: 30px;
+    outline: none;
+    width: 36%;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.49);
+}
+
+.form-style-agile {
+    margin-bottom: 1.5em;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+
+.form-style-agile input[type="text"],
+.form-style-agile input[type="password"] {
+    width: 100%;
+    color: #000;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid #000;
+    background: #fff;
+}
+

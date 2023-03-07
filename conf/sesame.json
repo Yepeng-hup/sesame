@@ -1,0 +1,9 @@
+{
+    "db_user": "root",
+    "db_passwd": "123",
+    "db_name": "sesame",
+    "db_ip": "127.0.0.1",
+    "db_port": "3306",
+    "service_ip_port": "127.0.0.1:7070",
+    "service_debug": false
+}

@@ -1,0 +1,116 @@
+{{define "index.tmpl"}}
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+        <title>DATATEST</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/sta/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/sta/js/logout.js"></script>
+        <script src="/sta/js/mysql.js"></script>
+    </head>
+
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="/index">DATATEST</a>
+                <button onclick="logout()" class="btn btn-success" style="position: absolute;top: 10px;right: 10px;"><b>Logout</b></button>
+            </ul>
+        </div>
+    </nav><br>
+
+    <div>
+        <table class="table">
+            <tbody>
+            <span style="color: #007bff"><b>MySQL Database connect</b></span>
+            <tr>
+                <td>
+                    <b>MySQL User</b> <input id="my-user" type="text" placeholder="default root">
+                </td>
+                <td>
+                    <b>MySQL Passord<font color="#dc143c">*</font></b> <input id="my-passwd" type="password" autocomplete="off">
+                </td>
+                <td>
+                    <b>MySQL DBName<font color="#dc143c">*</font></b> <input id="my-dbname" type="text">
+                </td>
+                <td>
+                    <b>MySQL DBIP</b><input type="text" id="my-dbip" placeholder="default 127.0.0.1">
+                </td>
+                <td>
+                    <b>MySQL DBPort</b><input type="text" id="my-dbport" placeholder="default 3306">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <tbody>
+            <span style="color: #007bff"><b>SQL write</b></span>
+            <tr>
+                <td>
+                    <b>insertSql<font color="#dc143c">*</font></b>
+                    <input style="width: 1000px" id="my-sql" type="text" placeholder="sql">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <tbody>
+            <span style="color: #007bff"><b>Data config</b></span>
+            <td>
+                <b>Whether to enable multithreading</b>
+                <select id="my-bool">
+                    <option>true</option>
+                    <option>false</option>
+                </select>
+            </td>
+            <td>
+                <b>Quantity</b>
+                <select id="my-Qnum">
+                    <option>100</option>
+                    <option>500</option>
+                    <option>1000</option>
+                    <option>5000</option>
+                    <option>20000</option>
+                    <option>50000</option>
+                    <option>100000</option>
+                    <option>1000000</option>
+                    <option>10000000</option>
+                </select>
+            </td>
+            <td>
+                <b style="color: #f34c1c">threading startNum</b>
+                <select id="my-threadingNum">
+                    <option>4</option>
+                    <option>8</option>
+                    <option>16</option>
+                    <option>32</option>
+                    <option>64</option>
+                    <option>128</option>
+                </select>
+            </td>
+            <td>
+                <b>write on sleep</b>
+                <select id="my-sleepNum">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>5</option>
+                </select>
+                <span>unit: s</span>
+            </td>
+            </tbody>
+        </table>
+        <button style="margin-left: 10px;" class="btn btn-success" onclick="pushFrom()">submit</button>
+    </div>
+
+    </body>
+    </html>
+{{end}}

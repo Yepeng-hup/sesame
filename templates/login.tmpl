@@ -1,0 +1,35 @@
+{{define "login.tmpl"}}
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+        <title>login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content=""/>
+        <link rel="stylesheet" href="/sta/css/login.css">
+        <link rel="stylesheet" href="/sta/css/all.css">
+    </head>
+
+    <body>
+        <br><br>
+        <div class="sub-main-w3">
+
+            <form action="index", method="post">
+                <p class=""><b style="color: red">{{.error}}</b></p>
+                <h2 style="color: #f36109">Welcome DATATEST</h2>
+
+                <div class="form-style-agile">
+                    <label>UserName</label>
+                    <input id="name" placeholder="input username" name="Name" type="text" required="" autocomplete="off">
+                </div>
+
+                <div class="form-style-agile">
+                    <label>Password</label>
+                    <input id="passwd" placeholder="input password" name="Password" type="password" required="" autocomplete="off">
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </body>
+    </html>
+{{end}}
