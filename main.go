@@ -15,7 +15,6 @@ import (
 	"sync"
 	"time"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 )
 
@@ -168,7 +167,6 @@ func mysqlR(c *gin.Context) {
 		req.DbPort = "3306"
 	}
     makeDB = append(makeDB[:0], req.User, req.Passwd, req.DbPort, req.DbIp, req.DbName)
-	fmt.Println(makeDB)
 	if req.Bools == "true"{
 		coProcess(req.Sql, req.SleepNum, req.ThreadNum, req.Qnum)
 	}else {
